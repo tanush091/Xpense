@@ -6,7 +6,7 @@ echo ========================================================
 echo.
 
 echo [1/2] Launching Spring Boot Backend (Port 8080)...
-start "Xpense Backend (Spring Boot)" cmd /k "cd /d %~dp0backend && mvn spring-boot:run"
+start "Xpense Backend (Spring Boot)" cmd /k "cd /d %~dp0backend && mvn -Dmaven.repo.local=%~dp0backend\.m2 spring-boot:run"
 
 echo [2/2] Launching React Frontend (Port 5173)...
 start "Xpense Frontend (Vite)" cmd /k "cd /d %~dp0frontend && npm run dev"
